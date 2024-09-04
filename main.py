@@ -11,8 +11,7 @@ def add_to_calculation(symboL):
 def evalulate_calculation():
     global calculator
     try:
-        reslut = str(eval(calculator))
-        calculator = ""
+        calculator = str(eval(calculator))
         text_result.delete(1.0, "end")
         text_result.insert(1.0, calculator)
     except:
@@ -63,7 +62,7 @@ btn_close = tk.Button(root, text=")", command=lambda: add_to_calculation(")"), w
 btn_close.grid(row=5, column=3)
 btn_clear = tk.Button(root, text="C", command=clear_field, width="11", font=("Arial", 14))
 btn_clear.grid(row=6, column=1, columnspan=2)
-btn_equals = tk.Button(root, text="=", command=lambda: evalulate_calculation, width=11, font=("Arial", 14))
+btn_equals = tk.Button(root, text="=", command=evalulate_calculation, width=11, font=("Arial", 14))
 btn_equals.grid(row=6, column=3, columnspan=2)
 
 root.mainloop()
